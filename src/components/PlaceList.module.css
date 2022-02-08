@@ -1,0 +1,25 @@
+#placeList {
+  display: inline-block;
+  overflow: auto;
+  text-align: center;
+  width: 500px;
+  height: 600px;
+  background-color: #ffffff;
+}
+
+#placeList_ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px 0 0;
+}
+
+.placeList_li {
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #eee;
+}
+
+.placeList_li:hover {
+  cursor: pointer;
+  background-color: #eff7ff;
+}

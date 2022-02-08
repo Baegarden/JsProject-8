@@ -1,0 +1,6 @@
+Kakao 지도 API 사용 01. 기본 설정 - https://www.youtube.com/watch?v=lNDo12RCk6o
+[React] React에 카카오 지도(KakaoMap)API 적용하기 - https://sw-ryu.tistory.com/59
+[React] 부모-자식 컴포넌트 간의 데이터 전달 방법 - https://technicolour.tistory.com/56
+16. useEffect를 사용하여 마운트/언마운트/업데이트시 할 작업 설정하기(렌더링 후 실행하고자 할때) - https://react.vlpt.us/basic/16-useEffect.html
+React에 CSS를 적용하는 여러 방법 - https://velog.io/@sorious77/React-CSS-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0
+이벤트에 인자 전달하기 - https://ko.reactjs.org/docs/handling-events.html#passing-arguments-to-event-handlers
