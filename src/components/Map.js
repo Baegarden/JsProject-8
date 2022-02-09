@@ -1,16 +1,10 @@
 /*global kakao*/
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './Map.module.css';
+import * as common from './commonFunction';
 
 function Map({ name, address }) {
-  const sliceAddress = beforeAddr => {
-    if (beforeAddr[1] === '1' || beforeAddr[1] === '2') {
-      return beforeAddr.substring(7, beforeAddr.length);
-    } else {
-      return beforeAddr.substring(2, beforeAddr.length);
-    }
-  };
-  const slicedAddress = sliceAddress(address);
+  const slicedAddress = common.sliceAddress(address);
   console.log(`${name} : ${slicedAddress}`);
 
   useEffect(() => {
@@ -53,7 +47,7 @@ function Map({ name, address }) {
         map.setCenter(coords);
       }
     });
-  }, [slicedAddress]);
+  }, [slicedAddress, name]);
 
   return (
     <div>

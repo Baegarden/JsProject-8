@@ -1,7 +1,8 @@
 import { useCallback, useState, useEffect } from 'react';
 import styles from './PlaceList.module.css';
+import * as common from './commonFunction';
 
-function PlaceList({ completeUrl, getClickedInfo }) {
+function PlaceList({ completeUrl, getClickedInfo, type, gu }) {
   const [placeList, setPlaceList] = useState([]);
 
   const getInfo = useCallback(async () => {
@@ -32,15 +33,25 @@ function PlaceList({ completeUrl, getClickedInfo }) {
     <div id={styles.placeList}>
       <ul id={styles.placeList_ul}>
         {placeList.map((place, index) => {
-          return (
-            <li
-              className={styles.placeList_li}
-              key={index}
-              onClick={e => changeAddress(place, e)}
-            >
-              {place.fclts_nm}
-            </li>
-          );
+          if (place.fclts_type === type && place.addr.search(gu) !== -1) {
+            return (
+              <li
+                className={styles.placeList_li}
+                key={index}
+                onClick={e => changeAddress(place, e)}
+              >
+                <div>
+                  <ul className={styles.placeDetail_ul}>
+                    <li className={styles.placeName}>{place.fclts_nm}</li>
+                    <li>{common.sliceAddress(place.addr)}</li>
+                    <li>
+                      {place.poc} · {place.use_fee}
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            );
+          } else return null;
         })}
       </ul>
     </div>
