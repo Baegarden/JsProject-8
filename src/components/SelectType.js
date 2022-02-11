@@ -1,197 +1,194 @@
 import styles from './SelectType.module.css';
+import * as common from './commonFunction';
 
 function SelectType() {
-  const clickedType = event => {
-    console.log(event.target.innerText);
-  };
-
   return (
-    <div>
-      <div>
-        <button
-          id={styles.soccer}
+    <div id={styles.selectContainer}>
+      <div className={styles.selectGroup}>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/soccer.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           축구장
-        </button>
-        <button
-          id={styles.football}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/football.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           풋살경기장
-        </button>
-        <button
-          id={styles.basketball}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/basketball.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           농구장
-        </button>
-        <button
-          id={styles.swim}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/swim.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           수영장
-        </button>
-        <button
-          id={styles.pingpong}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/pingpong.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           탁구장
-        </button>
+        </div>
       </div>
-      <div>
-        <button
-          id={styles.volleyball}
+      <div className={styles.selectGroup_middle}>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/volleyball.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           족구장
-        </button>
-        <button
-          id={styles.baseball}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/baseball.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           야구장
-        </button>
-        <button
-          id={styles.badminton}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/badminton.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           배드민턴장
-        </button>
-        <button
-          id={styles.tennis}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/tennis.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           테니스장
-        </button>
-        <button
-          id={styles.inlineskate}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/inlineskate.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           인라인스케이트
-        </button>
+        </div>
       </div>
-      <div>
-        <button
-          id={styles.gateball}
+      <div className={styles.selectGroup}>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/gateball.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           게이트볼
-        </button>
-        <button
-          id={styles.sqush}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/sqush.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           스쿼시
-        </button>
-        <button
-          id={styles.golf}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/golf.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           골프
-        </button>
-        <button
-          id={styles.stadium}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/stadium.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           종합운동장
-        </button>
-        <button
-          id={styles.else}
+        </div>
+        <div
+          className={styles.type}
           style={{
             background: 'url(img/else.png)',
             backgroundSize: '50px 50px',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top 30% left 50%',
           }}
-          onClick={clickedType}
+          onClick={common.clickedText}
         >
           기타
-        </button>
+        </div>
       </div>
     </div>
   );

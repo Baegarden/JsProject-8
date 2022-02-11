@@ -1,6 +1,7 @@
 import PlaceList from './components/PlaceList';
 import Map from './components/Map';
 import SelectType from './components/SelectType';
+import SelectGu from './components/SelectGu';
 import { useState } from 'react';
 import styles from './App.module.css';
 
@@ -19,10 +20,9 @@ function App() {
 
   return (
     <div>
-      <div>
-        <SelectType></SelectType>
-      </div>
-      <div id={styles.selected_div}>
+      <SelectType></SelectType>
+      {/* <SelectGu></SelectGu> */}
+      {/* <div id={styles.selected_div}>
         <span id={styles.selected}>
           {gu} {type}
         </span>
@@ -35,7 +35,7 @@ function App() {
           gu={gu}
         ></PlaceList>
         <Map name={name} address={address}></Map>
-      </div>
+      </div> */}
     </div>
   );
 }

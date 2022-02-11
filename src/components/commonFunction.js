@@ -5,3 +5,7 @@ export function sliceAddress(beforeAddr) {
     return beforeAddr.substring(2, beforeAddr.length);
   }
 }
+
+export function clickedText(event) {
+  console.log(event.target.innerText);
+}

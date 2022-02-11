@@ -1,8 +1,8 @@
 #selectContainer {
   position: absolute;
   width: 1000px;
-  height: 600px;
-  top: calc(50% - 150px);
+  height: 200px;
+  top: calc(50% - 50px);
   left: calc(50% - 500px);
 }
 
@@ -11,24 +11,18 @@
   justify-content: space-evenly;
 }
 
-.selectGroup_middle {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 30px 0 30px 0;
-}
-
-.type {
+.Gu {
   width: 150px;
   height: 150px;
   border: 1px solid #000000;
   border-radius: 50%;
   border-width: 3px;
   text-align: center;
-  line-height: 200px;
-  font-size: 18px;
+  line-height: 150px;
+  font-size: 24px;
   font-weight: bold;
 }
 
-.type:hover {
+.Gu:hover {
   border-color: darkgrey;
 }
