@@ -1,19 +1,14 @@
 import styles from './SelectGu.module.css';
-import * as common from './commonFunction';
+import SelectGuButton from './SelectGuButton';
 
 function SelectGu() {
+  const guList = ['기흥구', '수지구', '처인구'];
   return (
     <div id={styles.selectContainer}>
       <div className={styles.selectGroup}>
-        <div className={styles.Gu} onClick={common.clickedText}>
-          기흥구
-        </div>
-        <div className={styles.Gu} onClick={common.clickedText}>
-          수지구
-        </div>
-        <div className={styles.Gu} onClick={common.clickedText}>
-          처인구
-        </div>
+        {guList.map((gu, index) => {
+          return <SelectGuButton key={index} text={gu}></SelectGuButton>;
+        })}
       </div>
     </div>
   );
