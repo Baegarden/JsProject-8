@@ -1,8 +1,16 @@
 import { useCallback, useState, useEffect } from 'react';
 import styles from './PlaceList.module.css';
 import * as common from './commonFunction';
+import GetDistance from './GetDistance';
 
-function PlaceList({ completeUrl, getClickedInfo, type, gu }) {
+function PlaceList({
+  completeUrl,
+  getClickedInfo,
+  type,
+  gu,
+  myLatitude,
+  myLongitude,
+}) {
   const [placeList, setPlaceList] = useState([]);
 
   const getInfo = useCallback(async () => {
@@ -18,7 +26,7 @@ function PlaceList({ completeUrl, getClickedInfo, type, gu }) {
       })
     ).json();
     setPlaceList(JSON.parse(json).items);
-    console.log(JSON.parse(json).items);
+    // console.log(JSON.parse(json).items);
   }, [completeUrl]);
 
   useEffect(() => {
@@ -45,7 +53,14 @@ function PlaceList({ completeUrl, getClickedInfo, type, gu }) {
                     <li className={styles.placeName}>{place.fclts_nm}</li>
                     <li>{common.sliceAddress(place.addr)}</li>
                     <li>
-                      {place.poc} · {place.use_fee}
+                      <span style={{ float: 'left' }}>
+                        {common.sliceNumber(place.poc)} · {place.use_fee}
+                      </span>
+                      <GetDistance
+                        myLatitude={myLatitude}
+                        myLongitude={myLongitude}
+                        placeAddress={common.sliceAddress(place.addr)}
+                      ></GetDistance>
                     </li>
                   </ul>
                 </div>

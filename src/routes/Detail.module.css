@@ -1,4 +1,4 @@
-#container {
+.container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -11,4 +11,12 @@
 #selected {
   font-size: 48px;
   padding-left: 12%;
+}
+
+#position_error {
+  background-color: #ffffff;
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
 }
