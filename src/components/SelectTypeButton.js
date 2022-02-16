@@ -4,20 +4,22 @@ import { Link } from 'react-router-dom';
 
 function SelectTypeButton({ text, imgUrl, type }) {
   return (
-    <Link to={`/${type}`}>
-      <div
-        className={styles.btn}
-        style={{
-          background: `url(${imgUrl})`,
-          backgroundSize: '50px 50px',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'top 30% left 50%',
-        }}
-        onClick={common.clickedText}
-      >
-        {text}
-      </div>
-    </Link>
+    <div className={styles.btn_background}>
+      <Link to={`/${type}`}>
+        <div
+          className={styles.btn}
+          style={{
+            background: `url(${imgUrl})`,
+            backgroundSize: '50px 50px',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'top 30% left 50%',
+          }}
+          onClick={common.clickedText}
+        >
+          {text}
+        </div>
+      </Link>
+    </div>
   );
 }
 

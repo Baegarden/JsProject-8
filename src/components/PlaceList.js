@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect } from 'react';
 import styles from './PlaceList.module.css';
 import * as common from './commonFunction';
 import GetDistance from './GetDistance';
+import { FaSearch } from 'react-icons/fa';
 
 function PlaceList({
   completeUrl,
@@ -39,6 +40,12 @@ function PlaceList({
 
   return (
     <div id={styles.placeList}>
+      <div id={styles.selected_div}>
+        <span>
+          <FaSearch size="22" color="#ffffff"></FaSearch>
+        </span>
+        <span id={styles.selected}>{` ${gu} ${type}`}</span>
+      </div>
       <ul id={styles.placeList_ul}>
         {placeList.map((place, index) => {
           if (place.fclts_type === type && place.addr.search(gu) !== -1) {

@@ -1,16 +1,8 @@
 .container {
   display: flex;
   justify-content: space-evenly;
-}
-
-#selected_div {
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
-
-#selected {
-  font-size: 48px;
-  padding-left: 12%;
+  padding: 0 100px 0 100px;
+  margin-top: 200px;
 }
 
 #position_error {

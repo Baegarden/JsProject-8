@@ -6,11 +6,13 @@ import { Link } from 'react-router-dom';
 function SelectGuButton({ text, gu }) {
   const { type } = useParams();
   return (
-    <Link to={`/${type}/${gu}`}>
-      <div className={styles.btn} onClick={common.clickedText}>
-        {text}
-      </div>
-    </Link>
+    <div className={styles.btn_background}>
+      <Link to={`/${type}/${gu}`}>
+        <div className={styles.btn} onClick={common.clickedText}>
+          {text}
+        </div>
+      </Link>
+    </div>
   );
 }
 

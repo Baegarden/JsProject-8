@@ -62,11 +62,6 @@ function Detail() {
 
   return (
     <div>
-      <div id={styles.selected_div}>
-        <span id={styles.selected}>
-          {selectedGu} {selectedType}
-        </span>
-      </div>
       {myLatitude !== 404 ? (
         <div className={styles.container}>
           <PlaceList
