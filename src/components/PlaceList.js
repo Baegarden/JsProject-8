@@ -3,6 +3,8 @@ import styles from './PlaceList.module.css';
 import * as common from './commonFunction';
 import GetDistance from './GetDistance';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 function PlaceList({
   completeUrl,
@@ -11,8 +13,10 @@ function PlaceList({
   gu,
   myLatitude,
   myLongitude,
+  urlType,
 }) {
   const [placeList, setPlaceList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getInfo = useCallback(async () => {
     const json = await (
@@ -26,6 +30,7 @@ function PlaceList({
         }),
       })
     ).json();
+    setLoading(false);
     setPlaceList(JSON.parse(json).items);
     // console.log(JSON.parse(json).items);
   }, [completeUrl]);
@@ -46,36 +51,54 @@ function PlaceList({
         </span>
         <span id={styles.selected}>{` ${gu} ${type}`}</span>
       </div>
-      <ul id={styles.placeList_ul}>
-        {placeList.map((place, index) => {
-          if (place.fclts_type === type && place.addr.search(gu) !== -1) {
-            return (
-              <li
-                className={styles.placeList_li}
-                key={index}
-                onClick={e => changeAddress(place, e)}
-              >
-                <div>
-                  <ul className={styles.placeDetail_ul}>
-                    <li className={styles.placeName}>{place.fclts_nm}</li>
-                    <li>{common.sliceAddress(place.addr)}</li>
-                    <li>
-                      <span style={{ float: 'left' }}>
-                        {common.sliceNumber(place.poc)} · {place.use_fee}
-                      </span>
-                      <GetDistance
-                        myLatitude={myLatitude}
-                        myLongitude={myLongitude}
-                        placeAddress={common.sliceAddress(place.addr)}
-                      ></GetDistance>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            );
-          } else return null;
-        })}
-      </ul>
+      {loading ? (
+        <div id={styles.load_div}>
+          <Loading></Loading>
+        </div>
+      ) : (
+        <ul id={styles.placeList_ul}>
+          {placeList.map((place, index) => {
+            if (place.fclts_type === type && place.addr.search(gu) !== -1) {
+              return (
+                <li
+                  className={styles.placeList_li}
+                  key={index}
+                  onClick={e => changeAddress(place, e)}
+                >
+                  <div>
+                    <ul className={styles.placeDetail_ul}>
+                      <li className={styles.placeName}>{place.fclts_nm}</li>
+                      <li>{common.sliceAddress(place.addr)}</li>
+                      <li>
+                        <span style={{ float: 'left' }}>
+                          {common.sliceNumber(place.poc)} · {place.use_fee}
+                        </span>
+                        <GetDistance
+                          myLatitude={myLatitude}
+                          myLongitude={myLongitude}
+                          placeAddress={common.sliceAddress(place.addr)}
+                        ></GetDistance>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              );
+            } else return null;
+          })}
+        </ul>
+      )}
+      <div id={styles.change_div}>
+        <div className={styles.nav}>
+          <Link to={`/`}>
+            <div className={styles.nav_content}>시설 변경</div>
+          </Link>
+        </div>
+        <div className={styles.nav}>
+          <Link to={`/${urlType}`}>
+            <div className={styles.nav_content}>지역 변경</div>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

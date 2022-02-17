@@ -71,6 +71,8 @@ function Detail() {
             gu={selectedGu}
             myLatitude={myLatitude}
             myLongitude={myLongitude}
+            urlType={type}
+            urlGu={gu}
           ></PlaceList>
           <Map
             name={name}
