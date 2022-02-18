@@ -4,3 +4,26 @@ body {
   background-color: #f3f3f3;
   height: 100%;
 }
+
+.custom-shape-divider-top-1645190376 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1645190376 svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 500px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1645190376 .shape-fill {
+  fill: #ffffff;
+}

@@ -89,12 +89,12 @@ function PlaceList({
       )}
       <div id={styles.change_div}>
         <div className={styles.nav}>
-          <Link to={`/`}>
+          <Link to={`/select`}>
             <div className={styles.nav_content}>시설 변경</div>
           </Link>
         </div>
         <div className={styles.nav}>
-          <Link to={`/${urlType}`}>
+          <Link to={`/select/${urlType}`}>
             <div className={styles.nav_content}>지역 변경</div>
           </Link>
         </div>

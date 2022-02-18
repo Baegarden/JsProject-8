@@ -1,8 +1,11 @@
 .container {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 100px 0 100px;
-  margin-top: 150px;
+  width: 1500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #position_error {

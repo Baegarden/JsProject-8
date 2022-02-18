@@ -1,9 +1,11 @@
+import Logo from '../components/Logo';
 import SelectGu from '../components/SelectGu';
 
 function Gu() {
   return (
     <div>
-      <SelectGu></SelectGu>
+      <Logo></Logo>
+      <SelectGu></SelectGu>;
     </div>
   );
 }

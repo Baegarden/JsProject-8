@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function SelectTypeButton({ text, imgUrl, type }) {
   return (
     <div className={styles.btn_background}>
-      <Link to={`/${type}`}>
+      <Link to={`/select/${type}`}>
         <div
           className={styles.btn}
           style={{

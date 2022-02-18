@@ -1,0 +1,11 @@
+.logo_div {
+  margin: 80px auto 70px auto;
+  width: 1000px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}

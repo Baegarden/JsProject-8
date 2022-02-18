@@ -7,7 +7,7 @@ function SelectGuButton({ text, gu }) {
   const { type } = useParams();
   return (
     <div className={styles.btn_background}>
-      <Link to={`/${type}/${gu}`}>
+      <Link to={`/select/${type}/${gu}`}>
         <div className={styles.btn} onClick={common.clickedText}>
           {text}
         </div>
