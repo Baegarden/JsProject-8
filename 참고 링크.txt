@@ -6,3 +6,4 @@ React에 CSS를 적용하는 여러 방법 - https://velog.io/@sorious77/React-C
 이벤트에 인자 전달하기 - https://ko.reactjs.org/docs/handling-events.html#passing-arguments-to-event-handlers
 NodeJS - 거리구하기(위도 / 경도) - https://velog.io/@neity16/NodeJS-거리구하기위도-경도 - https://kimyang-sun.tistory.com/entry/React-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%95%84%EC%9D%B4%EC%BD%98react-icons-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
 [React] <Switch>는 언제 써야 할까? - https://baeharam.netlify.app/posts/react/why-switch-is-needed
+절대경로 상대경로 차이(./ ../ 차이) - https://truecode-95.tistory.com/43
