@@ -3,9 +3,13 @@
   width: 1000px;
   text-align: center;
   background-color: transparent;
+  font-size: 36px;
+  font-weight: 500;
+  color: #2b2d2e;
 }
 
 .logo {
   display: block;
   margin: 0 auto;
+  margin-bottom: 20px;
 }

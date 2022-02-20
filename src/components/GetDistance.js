@@ -35,7 +35,7 @@ function GetDistance({ myLatitude, myLongitude, placeAddress }) {
         paddingRight: '10px',
       }}
     >
-      거리 : {distance}
+      거리 : {distance === 0 ? '-' : distance}
     </span>
   );
 }

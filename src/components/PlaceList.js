@@ -17,6 +17,7 @@ function PlaceList({
 }) {
   const [placeList, setPlaceList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const getInfo = useCallback(async () => {
     const json = await (
@@ -43,6 +44,10 @@ function PlaceList({
     getClickedInfo(place);
   };
 
+  const changeStateOfSuccess = tmp => {
+    setIsSuccess(tmp);
+  };
+
   return (
     <div id={styles.placeList}>
       <div id={styles.selected_div}>
@@ -59,6 +64,7 @@ function PlaceList({
         <ul id={styles.placeList_ul}>
           {placeList.map((place, index) => {
             if (place.fclts_type === type && place.addr.search(gu) !== -1) {
+              if (isSuccess === false) changeStateOfSuccess(true);
               return (
                 <li
                   className={styles.placeList_li}
@@ -85,6 +91,11 @@ function PlaceList({
               );
             } else return null;
           })}
+          {isSuccess === false ? (
+            <div id={styles.load_div}>
+              <h3 className={styles.zero_place}>시설이 없습니다</h3>
+            </div>
+          ) : null}
         </ul>
       )}
       <div id={styles.change_div}>

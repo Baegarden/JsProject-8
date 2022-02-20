@@ -22,7 +22,7 @@ function Gu() {
       </div>
       <div className={styles.logo_div}>
         <img className={styles.logo} src={logoImg} alt="logo"></img>
-        <h1>공공체육시설 조회</h1>
+        공공체육시설 조회
       </div>
       <SelectGu></SelectGu>;
     </div>

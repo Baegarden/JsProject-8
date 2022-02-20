@@ -18,7 +18,7 @@ function Logo() {
       </div>
       <div className={styles.logo_div}>
         <img className={styles.logo} src={'img/logo.png'} alt="logo"></img>
-        <h1>공공체육시설 조회</h1>
+        공공체육시설 조회
       </div>
     </div>
   );
