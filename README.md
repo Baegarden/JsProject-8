@@ -18,7 +18,7 @@ HTML, CSS, JavaScript, React, Express.js, Heroku
 <br><br><br>
 
 > ### Try-it! 
-https://baegarden.github.io/JsProject-7/
+https://yongin-sports-facility.herokuapp.com/
 <br><br><br>
 
 
