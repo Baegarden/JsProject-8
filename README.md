@@ -12,9 +12,9 @@ HTML, CSS, JavaScript, React, Express.js, Heroku
 <br><br><br>
 
 > ### 사진 
-![Home](https://user-images.githubusercontent.com/76520025/150144657-fa3b5102-213c-4b01-a1f3-5351c3e01faa.PNG)
+![type](https://user-images.githubusercontent.com/76520025/155539120-4b4f464b-5d6a-4997-87d1-cd1eb85138e2.PNG)
 <br><br><br>
-![Detail](https://user-images.githubusercontent.com/76520025/150144649-2c44d777-25ce-4607-a68b-1388e0f2074b.PNG)
+![result](https://user-images.githubusercontent.com/76520025/155539124-10f807ac-6961-41a5-9c07-afa031b13f59.PNG)
 <br><br><br>
 
 > ### Try-it! 
