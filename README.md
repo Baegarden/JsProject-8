@@ -1,14 +1,14 @@
 # JsProject-8
-🎬 <strong>ReactJS로 영화 웹 서비스 만들기 (New)</strong><br><br><br>
+👍 <strong>React로 용인시 공공체육시설 간편조회 사이트 만들기</strong><br><br><br>
 
 > ### 개발환경 
-HTML, CSS, JavaScript, React
+HTML, CSS, JavaScript, React, Express.js, Heroku
 <br><br><br>
 
 > ### 기능
-* 영화의 제목, 제작연도, 장르, 줄거리, 포스터 정보제공
-* Slide 구현
-* Router를 사용한 페이지 전환
+* 공공데이터를 활용하여 용인시 공공체육시설 간편조회 제공
+* 카카오맵 API를 이용하여 공공체육시설의 위치 표시
+* CSR의 단점인 느린 초기 로딩속도와, 검색엔진최적화(SEO)의 문제로 인해 SSR을 지원하는 NEXT.js의 필요성을 느낌
 <br><br><br>
 
 > ### 사진 
